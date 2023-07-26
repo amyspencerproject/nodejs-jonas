@@ -43,12 +43,13 @@ const server = http.createServer();
 
 server.on('request', (req, res) => {
   console.log('Request received!🐬');
+  console.log(req.url);
   res.end('Request received!🐙');
 });
 
 server.on('request', (req, res) => {
   console.log('Request received again!🌊');
-  console.log('Request received!🏄‍♂️');
+  // res.end('Request received!🏄‍♂️');
 });
 
 server.on('close', () => {
